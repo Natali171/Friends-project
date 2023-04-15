@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Friends 👫👭👬</title>
+    <style>
+      body {
+        background: linear-gradient(
+          111.4deg,
+          rgb(209, 231, 235) 7.4%,
+          rgb(238, 219, 199) 51.4%,
+          rgb(255, 159, 122) 82.6%,
+          rgb(255, 109, 58) 100.2%
+        );
+      }
+      h1 {
+        background-color: #21243deb;
+        border-radius: 8px;
+        color: #ffd082;
+        display: block;
+        font-family: sans-serif;
+        font-size: 44px;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        text-align: center;
+      }
+      h2 {
+        color: #21243d;
+        display: block;
+        font-family: sans-serif;
+        font-size: 28px;
+        font-weight: 600px;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        text-align: center;
+      }
+      img {
+        border-radius: 4px;
+        display: block;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      p {
+        color: #21243d;
+        display: block;
+        font-family: "Times New Roman", Times, serif;
+        font-size: 18px;
+        line-height: 22px;
+        margin: 20px auto;
+        text-align: center;
+      }
+      span {
+        border-block: 1px solid #21243d;
+        display: block;
+        padding: 20px;
+      }
+
+      a {
+        color: #1b3764;
+        display: block;
+        font-size: 20px;
+        text-decoration: none;
+        text-align: center;
+        margin: 0 auto;
+        padding: 5px 15px 30px;
+      }
+      a:hover {
+        font-weight: 600;
+        text-decoration: underline;
+      }
+      button {
+        background-color: #ffd082;
+        border: 1px solid #ff7c7c;
+        border-radius: 30px;
+        box-shadow: 4px 4px 8px 2px #21243d51;
+        color: #21243d;
+        display: block;
+        font-size: 24px;
+        font-family: sans-serif;
+        font-weight: 600;
+        margin: 0 auto;
+        padding: 20px;
+        transition: all 200ms ease-in-out;
+      }
+      button:hover {
+        background-color: #ff7c7c;
+        border: #ffd082;
+        box-shadow: 4px 4px 8px 2px rgba(245, 245, 220, 0.4);
+        cursor: pointer;
+        color: beige;
+      }
+      .coded-by {
+        color: #21243dbd;
+        display: block;
+        font-size: 16px;
+        line-height: 22px;
+        margin: 20px auto;
+        text-align: center;
+      }
+      .container {
+        display: block;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>F R I E N D S</h1>
+      <h2>The best serial ever</h2>
+      <img
+        src="https://i.shgcdn.com/3cfb514f-e69c-4450-8bcc-86f8474e5fb6/-/format/auto/-/preview/3000x3000/-/quality/lighter/"
+        alt="Friends"
+      />
+      <p>
+        <em>
+          Follows the personal and professional lives of six twenty to thirty
+          year-old <strong>friends</strong> living in the Manhattan borough of
+          New York City.</em
+        ><br /><br /><span
+          ><strong>Friends</strong> has been on air for over 25 years now, but
+          the show hardly seems to be getting old. The show has been a landmark
+          in TV history and has redefined the meaning of comedy and sitcom in
+          many ways. The remarkable actors, the script, and the witty jokes all
+          make up for one of the best sitcoms ever. Providing viewers with
+          top-notch entertainment, it ranks very high on fans' lists who now and
+          again turn to the sitcom for some good laughs and a trip down memory
+          lane.</span
+        >
+      </p>
+      <a href="https://en.wikipedia.org/wiki/Friends" target="_blank">
+        Learn more about Friends
+      </a>
+      <button>Watch Friends</button>
+      <p class="coded-by">This page was built by Natalia Andriichuk</p>
+    </div>
+    <script>
+      function getName() {
+        return prompt("What is you name?");
+      }
+      function getViewsNumber() {
+        return prompt("How many times did you see FRIENDS?");
+      }
+      function printMessage() {
+        let name = getName();
+        let viewsNumber = getViewsNumber();
+        if (viewsNumber < 1) {
+          alert(
+            `Hi, ${name}, Congratulations to your first watching Friends! There's no doubt, you'll like it.`
+          );
+        } else if (viewsNumber >= 1 && viewsNumber < 5) {
+          alert(
+            `Hi, ${name}! Watching Friends is always a good idea. Here you can do it one more time. `
+          );
+        } else if (viewsNumber >= 5) {
+          alert(
+            `Hi, ${name}! Looks like you are a big fan of Friends. Enjoy watching it again!  `
+          );
+        } else {
+          alert(`Hi, ${name}! Enjoy watching Friends!`);
+        }
+      }
+      let watchButton = document.querySelector("button");
+      watchButton.addEventListener("click", printMessage);
+    </script>
+  </body>
+</html>
